@@ -1,0 +1,86 @@
+*{
+    padding: 0; margin: 0;
+    box-sizing: border-box;
+    border: none; outline: none;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container{
+    display: flex;
+    width: 1000px;
+    height: 80vh;
+}
+
+.container .status{
+    flex: 1;
+    background: #f3f3f3;
+    margin: .1rem;
+}
+
+
+.container .status:nth-child(odd){
+    background: #c9c4c4;    
+}
+
+.container .status h2{
+    background: #9a9696;
+    text-align: center;
+}
+
+.open_modal{
+    background: #767171;
+    width: 100%;
+    font-size: 1rem;
+    padding: .5rem;
+    margin: .2rem 0;
+    cursor: pointer;
+}
+
+
+.modal{
+    background: #aba5a5;
+    position: fixed;
+    width: 450px;
+    top: -50%;
+    left: calc(50% - 225px);
+    transition: top .3s linear;
+}
+
+.modal.active{
+    top: 15%;
+}
+
+.modal .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+    font-size: 2rem;
+}
+
+.modal .body input{
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+.todo{
+    background: #767171;
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem;
+    font-size: 1.5rem;
+    margin: .2rem 0;
+    cursor: grab;
+}
+
+.todo span:nth-child(2){
+    cursor: pointer;
+}
+
